@@ -22,13 +22,20 @@
   
 
   
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/gallery.css" type="text/css" />
@@ -37,21 +44,16 @@
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="pygmt.Figure.coast" href="pygmt.Figure.coast.html" />
     <link rel="prev" title="pygmt.Figure" href="pygmt.Figure.html" /> 
-
-  
-  <script src="../../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
     <a href="../../index.html"><h2 class="sidebar-title">PyGMT</h2></a>
 
@@ -86,8 +88,9 @@
             
               <p class="caption"><span class="caption-text">Getting Started</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../install.html">Installing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tutorials/overview.html">Making your first figure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/first-figure.html">Making your first figure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../gallery/index.html">Gallery</a></li>
 </ul>
 <p class="caption"><span class="caption-text">User Guide</span></p>
@@ -110,6 +113,7 @@
 <li class="toctree-l3"><a class="reference internal" href="pygmt.Figure.grdimage.html">pygmt.Figure.grdimage</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pygmt.Figure.logo.html">pygmt.Figure.logo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pygmt.Figure.image.html">pygmt.Figure.image</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pygmt.Figure.shift_origin.html">pygmt.Figure.shift_origin</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pygmt.Figure.savefig.html">pygmt.Figure.savefig</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pygmt.Figure.show.html">pygmt.Figure.show</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pygmt.Figure.psconvert.html">pygmt.Figure.psconvert</a></li>
@@ -241,14 +245,14 @@
 <h1>pygmt.Figure.basemap<a class="headerlink" href="#pygmt-figure-basemap" title="Permalink to this headline">¶</a></h1>
 <dl class="method">
 <dt id="pygmt.Figure.basemap">
-<code class="descclassname">Figure.</code><code class="descname">basemap</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pygmt.Figure.basemap" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">Figure.</code><code class="descname">basemap</code><span class="sig-paren">(</span><em>self</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pygmt.Figure.basemap" title="Permalink to this definition">¶</a></dt>
 <dd><p>Produce a basemap for the figure.</p>
 <p>Several map projections are available, and the user may specify
 separate tick-mark intervals for boundary annotation, ticking, and
 [optionally] gridlines. A simple map scale or directional rose may also
 be plotted.</p>
 <p>At least one of the options <em>B</em>, <em>L</em>, or <em>T</em> must be specified.</p>
-<p>Full option list at <a class="reference external" href="http://gmt.soest.hawaii.edu/doc/latest/basemap.html">http://gmt.soest.hawaii.edu/doc/latest/basemap.html</a></p>
+<p>Full option list at <a class="reference external" href="https://www.generic-mapping-tools.org/gmt/latest/basemap.html">https://www.generic-mapping-tools.org/gmt/latest/basemap.html</a></p>
 <p><strong>Aliases:</strong></p>
 <ul class="simple">
 <li>B = frame</li>
@@ -307,7 +311,7 @@ reference and anchor points</p>
         <a href="pygmt.Figure.coast.html" class="btn btn-neutral float-right" title="pygmt.Figure.coast" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="pygmt.Figure.html" class="btn btn-neutral" title="pygmt.Figure" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="pygmt.Figure.html" class="btn btn-neutral float-left" title="pygmt.Figure" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -317,7 +321,9 @@ reference and anchor points</p>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017-2019, The PyGMT Developers.
-      Last updated on Jan 26, 2019.
+      <span class="lastupdated">
+        Last updated on Aug 31, 2019.
+      </span>
 
     </p>
   </div>
@@ -334,26 +340,16 @@ reference and anchor points</p>
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-    
-
-  
-
-  <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

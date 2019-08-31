@@ -22,34 +22,36 @@
   
 
   
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
-
-  
-  <script src="../../../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
     <a href="../../../index.html"><h2 class="sidebar-title">PyGMT</h2></a>
 
@@ -84,8 +86,9 @@
             
               <p class="caption"><span class="caption-text">Getting Started</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../install.html">Installing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../tutorials/overview.html">Making your first figure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorials/first-figure.html">Making your first figure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../gallery/index.html">Gallery</a></li>
 </ul>
 <p class="caption"><span class="caption-text">User Guide</span></p>
@@ -260,7 +263,7 @@
 <span class="sd">    library in the directory specified by it.</span>
 
 <span class="sd">    A ``GMTVersionError`` exception will be raised if the GMT shared library reports a</span>
-<span class="sd">    version &lt; 6.0.0.</span>
+<span class="sd">    version &lt; 6.0.0rc1.</span>
 
 <span class="sd">    The ``session_pointer`` attribute holds a ctypes pointer to the currently open</span>
 <span class="sd">    session.</span>
@@ -299,7 +302,7 @@
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1"># The minimum version of GMT required</span>
-    <span class="n">required_version</span> <span class="o">=</span> <span class="s2">&quot;6.0.0&quot;</span>
+    <span class="n">required_version</span> <span class="o">=</span> <span class="s2">&quot;6.0.0rc1&quot;</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">session_pointer</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -364,7 +367,7 @@
         <span class="k">if</span> <span class="n">Version</span><span class="p">(</span><span class="n">version</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">Version</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">required_version</span><span class="p">):</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">destroy</span><span class="p">()</span>
             <span class="k">raise</span> <span class="n">GMTVersionError</span><span class="p">(</span>
-                <span class="s2">&quot;Using an incompatible GMT version </span><span class="si">{}</span><span class="s2">. Must be newer than </span><span class="si">{}</span><span class="s2">.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                <span class="s2">&quot;Using an incompatible GMT version </span><span class="si">{}</span><span class="s2">. Must be equal or newer than </span><span class="si">{}</span><span class="s2">.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
                     <span class="n">version</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">required_version</span>
                 <span class="p">)</span>
             <span class="p">)</span>
@@ -1481,7 +1484,9 @@
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017-2019, The PyGMT Developers.
-      Last updated on Jan 26, 2019.
+      <span class="lastupdated">
+        Last updated on Aug 31, 2019.
+      </span>
 
     </p>
   </div>
@@ -1498,26 +1503,16 @@
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../../_static/language_data.js"></script>
-    
-
-  
-
-  <script type="text/javascript" src="../../../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

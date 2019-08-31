@@ -1,0 +1,10 @@
+
+:orphan:
+
+.. _sphx_glr_projections_conic_sg_execution_times:
+
+Computation times
+=================
+**00:01.581** total execution time for **projections_conic** files:
+
+- **00:01.581**: :ref:`sphx_glr_projections_conic_conic_albers.py` (``conic_albers.py``)

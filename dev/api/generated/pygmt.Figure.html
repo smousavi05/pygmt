@@ -22,13 +22,20 @@
   
 
   
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/gallery.css" type="text/css" />
@@ -37,21 +44,16 @@
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="pygmt.Figure.basemap" href="pygmt.Figure.basemap.html" />
     <link rel="prev" title="API Reference" href="../index.html" /> 
-
-  
-  <script src="../../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
     <a href="../../index.html"><h2 class="sidebar-title">PyGMT</h2></a>
 
@@ -86,8 +88,9 @@
             
               <p class="caption"><span class="caption-text">Getting Started</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../install.html">Installing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tutorials/overview.html">Making your first figure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/first-figure.html">Making your first figure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../gallery/index.html">Gallery</a></li>
 </ul>
 <p class="caption"><span class="caption-text">User Guide</span></p>
@@ -110,6 +113,7 @@
 <li class="toctree-l3"><a class="reference internal" href="pygmt.Figure.grdimage.html">pygmt.Figure.grdimage</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pygmt.Figure.logo.html">pygmt.Figure.logo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pygmt.Figure.image.html">pygmt.Figure.image</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pygmt.Figure.shift_origin.html">pygmt.Figure.shift_origin</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pygmt.Figure.savefig.html">pygmt.Figure.savefig</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pygmt.Figure.show.html">pygmt.Figure.show</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pygmt.Figure.psconvert.html">pygmt.Figure.psconvert</a></li>
@@ -288,37 +292,40 @@ a file using <a class="reference internal" href="pygmt.Figure.savefig.html#pygmt
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="pygmt.Figure.basemap.html#pygmt.Figure.basemap" title="pygmt.Figure.basemap"><code class="xref py py-obj docutils literal notranslate"><span class="pre">basemap</span></code></a>(**kwargs)</td>
+<tr class="row-odd"><td><a class="reference internal" href="pygmt.Figure.basemap.html#pygmt.Figure.basemap" title="pygmt.Figure.basemap"><code class="xref py py-obj docutils literal notranslate"><span class="pre">basemap</span></code></a>(self,&nbsp;\*\*kwargs)</td>
 <td>Produce a basemap for the figure.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="pygmt.Figure.coast.html#pygmt.Figure.coast" title="pygmt.Figure.coast"><code class="xref py py-obj docutils literal notranslate"><span class="pre">coast</span></code></a>(**kwargs)</td>
+<tr class="row-even"><td><a class="reference internal" href="pygmt.Figure.coast.html#pygmt.Figure.coast" title="pygmt.Figure.coast"><code class="xref py py-obj docutils literal notranslate"><span class="pre">coast</span></code></a>(self,&nbsp;\*\*kwargs)</td>
 <td>Plot continents, shorelines, rivers, and borders on maps</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="pygmt.Figure.contour.html#pygmt.Figure.contour" title="pygmt.Figure.contour"><code class="xref py py-obj docutils literal notranslate"><span class="pre">contour</span></code></a>([x,&nbsp;y,&nbsp;z,&nbsp;data])</td>
+<tr class="row-odd"><td><a class="reference internal" href="pygmt.Figure.contour.html#pygmt.Figure.contour" title="pygmt.Figure.contour"><code class="xref py py-obj docutils literal notranslate"><span class="pre">contour</span></code></a>(self[,&nbsp;x,&nbsp;y,&nbsp;z,&nbsp;data])</td>
 <td>Contour table data by direct triangulation.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="pygmt.Figure.grdcontour.html#pygmt.Figure.grdcontour" title="pygmt.Figure.grdcontour"><code class="xref py py-obj docutils literal notranslate"><span class="pre">grdcontour</span></code></a>(grid,&nbsp;**kwargs)</td>
+<tr class="row-even"><td><a class="reference internal" href="pygmt.Figure.grdcontour.html#pygmt.Figure.grdcontour" title="pygmt.Figure.grdcontour"><code class="xref py py-obj docutils literal notranslate"><span class="pre">grdcontour</span></code></a>(self,&nbsp;grid,&nbsp;\*\*kwargs)</td>
 <td>Convert grids or images to contours and plot them on maps</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="pygmt.Figure.grdimage.html#pygmt.Figure.grdimage" title="pygmt.Figure.grdimage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">grdimage</span></code></a>(grid,&nbsp;**kwargs)</td>
+<tr class="row-odd"><td><a class="reference internal" href="pygmt.Figure.grdimage.html#pygmt.Figure.grdimage" title="pygmt.Figure.grdimage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">grdimage</span></code></a>(self,&nbsp;grid,&nbsp;\*\*kwargs)</td>
 <td>Project grids or images and plot them on maps.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="pygmt.Figure.image.html#pygmt.Figure.image" title="pygmt.Figure.image"><code class="xref py py-obj docutils literal notranslate"><span class="pre">image</span></code></a>(imagefile,&nbsp;**kwargs)</td>
+<tr class="row-even"><td><a class="reference internal" href="pygmt.Figure.image.html#pygmt.Figure.image" title="pygmt.Figure.image"><code class="xref py py-obj docutils literal notranslate"><span class="pre">image</span></code></a>(self,&nbsp;imagefile,&nbsp;\*\*kwargs)</td>
 <td>Place images or EPS files on maps.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="pygmt.Figure.logo.html#pygmt.Figure.logo" title="pygmt.Figure.logo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">logo</span></code></a>(**kwargs)</td>
+<tr class="row-odd"><td><a class="reference internal" href="pygmt.Figure.logo.html#pygmt.Figure.logo" title="pygmt.Figure.logo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">logo</span></code></a>(self,&nbsp;\*\*kwargs)</td>
 <td>Place the GMT graphics logo on a map.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="pygmt.Figure.plot.html#pygmt.Figure.plot" title="pygmt.Figure.plot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot</span></code></a>([x,&nbsp;y,&nbsp;data,&nbsp;sizes,&nbsp;direction])</td>
+<tr class="row-even"><td><a class="reference internal" href="pygmt.Figure.plot.html#pygmt.Figure.plot" title="pygmt.Figure.plot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot</span></code></a>(self[,&nbsp;x,&nbsp;y,&nbsp;data,&nbsp;sizes,&nbsp;direction])</td>
 <td>Plot lines, polygons, and symbols on maps.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="pygmt.Figure.psconvert.html#pygmt.Figure.psconvert" title="pygmt.Figure.psconvert"><code class="xref py py-obj docutils literal notranslate"><span class="pre">psconvert</span></code></a>(**kwargs)</td>
+<tr class="row-odd"><td><a class="reference internal" href="pygmt.Figure.psconvert.html#pygmt.Figure.psconvert" title="pygmt.Figure.psconvert"><code class="xref py py-obj docutils literal notranslate"><span class="pre">psconvert</span></code></a>(self,&nbsp;\*\*kwargs)</td>
 <td>Convert [E]PS file(s) to other formats.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="pygmt.Figure.savefig.html#pygmt.Figure.savefig" title="pygmt.Figure.savefig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">savefig</span></code></a>(fname[,&nbsp;transparent,&nbsp;crop,&nbsp;…])</td>
+<tr class="row-even"><td><a class="reference internal" href="pygmt.Figure.savefig.html#pygmt.Figure.savefig" title="pygmt.Figure.savefig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">savefig</span></code></a>(self,&nbsp;fname[,&nbsp;transparent,&nbsp;crop,&nbsp;…])</td>
 <td>Save the figure to a file.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="pygmt.Figure.show.html#pygmt.Figure.show" title="pygmt.Figure.show"><code class="xref py py-obj docutils literal notranslate"><span class="pre">show</span></code></a>([dpi,&nbsp;width,&nbsp;method])</td>
+<tr class="row-odd"><td><a class="reference internal" href="pygmt.Figure.shift_origin.html#pygmt.Figure.shift_origin" title="pygmt.Figure.shift_origin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">shift_origin</span></code></a>(self[,&nbsp;xshift,&nbsp;yshift])</td>
+<td>Shift plot origin in x and/or y directions.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="pygmt.Figure.show.html#pygmt.Figure.show" title="pygmt.Figure.show"><code class="xref py py-obj docutils literal notranslate"><span class="pre">show</span></code></a>(self[,&nbsp;dpi,&nbsp;width,&nbsp;method])</td>
 <td>Display a preview of the figure.</td>
 </tr>
 </tbody>
@@ -338,7 +345,7 @@ a file using <a class="reference internal" href="pygmt.Figure.savefig.html#pygmt
         <a href="pygmt.Figure.basemap.html" class="btn btn-neutral float-right" title="pygmt.Figure.basemap" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../index.html" class="btn btn-neutral" title="API Reference" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../index.html" class="btn btn-neutral float-left" title="API Reference" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -348,7 +355,9 @@ a file using <a class="reference internal" href="pygmt.Figure.savefig.html#pygmt
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017-2019, The PyGMT Developers.
-      Last updated on Jan 26, 2019.
+      <span class="lastupdated">
+        Last updated on Aug 31, 2019.
+      </span>
 
     </p>
   </div>
@@ -365,26 +374,16 @@ a file using <a class="reference internal" href="pygmt.Figure.savefig.html#pygmt
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-    
-
-  
-
-  <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

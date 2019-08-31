@@ -22,13 +22,20 @@
   
 
   
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/gallery.css" type="text/css" />
@@ -37,21 +44,16 @@
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="pygmt.clib.Session.call_module" href="pygmt.clib.Session.call_module.html" />
     <link rel="prev" title="pygmt.exceptions.GMTCLibNotFoundError" href="pygmt.exceptions.GMTCLibNotFoundError.html" /> 
-
-  
-  <script src="../../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
     <a href="../../index.html"><h2 class="sidebar-title">PyGMT</h2></a>
 
@@ -86,8 +88,9 @@
             
               <p class="caption"><span class="caption-text">Getting Started</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../install.html">Installing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tutorials/overview.html">Making your first figure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/first-figure.html">Making your first figure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../gallery/index.html">Gallery</a></li>
 </ul>
 <p class="caption"><span class="caption-text">User Guide</span></p>
@@ -259,7 +262,7 @@ API calls that will use the data.</p>
 If the environment variable <code class="docutils literal notranslate"><span class="pre">GMT_LIBRARY_PATH</span></code> is set, will look for the shared
 library in the directory specified by it.</p>
 <p>A <code class="docutils literal notranslate"><span class="pre">GMTVersionError</span></code> exception will be raised if the GMT shared library reports a
-version &lt; 6.0.0.</p>
+version &lt; 6.0.0rc1.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">session_pointer</span></code> attribute holds a ctypes pointer to the currently open
 session.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -267,14 +270,14 @@ session.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><dl class="first last docutils">
-<dt><strong>GMTCLibNotFoundError</strong></dt>
+<dt>GMTCLibNotFoundError</dt>
 <dd><p class="first last">If there was any problem loading the library (couldn’t find it or couldn’t
 access the functions).</p>
 </dd>
-<dt><strong>GMTCLibNoSessionError</strong></dt>
+<dt>GMTCLibNoSessionError</dt>
 <dd><p class="first last">If you try to call a method outside of a ‘with’ block.</p>
 </dd>
-<dt><strong>GMTVersionError</strong></dt>
+<dt>GMTVersionError</dt>
 <dd><p class="first last">If the minimum required version of GMT is not found.</p>
 </dd>
 </dl>
@@ -325,46 +328,46 @@ access the functions).</p>
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="pygmt.clib.Session.call_module.html#pygmt.clib.Session.call_module" title="pygmt.clib.Session.call_module"><code class="xref py py-obj docutils literal notranslate"><span class="pre">call_module</span></code></a>(module,&nbsp;args)</td>
+<tr class="row-odd"><td><a class="reference internal" href="pygmt.clib.Session.call_module.html#pygmt.clib.Session.call_module" title="pygmt.clib.Session.call_module"><code class="xref py py-obj docutils literal notranslate"><span class="pre">call_module</span></code></a>(self,&nbsp;module,&nbsp;args)</td>
 <td>Call a GMT module with the given arguments.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="pygmt.clib.Session.create.html#pygmt.clib.Session.create" title="pygmt.clib.Session.create"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create</span></code></a>(name)</td>
+<tr class="row-even"><td><a class="reference internal" href="pygmt.clib.Session.create.html#pygmt.clib.Session.create" title="pygmt.clib.Session.create"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create</span></code></a>(self,&nbsp;name)</td>
 <td>Create a new GMT C API session.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="pygmt.clib.Session.create_data.html#pygmt.clib.Session.create_data" title="pygmt.clib.Session.create_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_data</span></code></a>(family,&nbsp;geometry,&nbsp;mode,&nbsp;**kwargs)</td>
+<tr class="row-odd"><td><a class="reference internal" href="pygmt.clib.Session.create_data.html#pygmt.clib.Session.create_data" title="pygmt.clib.Session.create_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_data</span></code></a>(self,&nbsp;family,&nbsp;geometry,&nbsp;mode,&nbsp;…)</td>
 <td>Create an empty GMT data container.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="pygmt.clib.Session.destroy.html#pygmt.clib.Session.destroy" title="pygmt.clib.Session.destroy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">destroy</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="pygmt.clib.Session.destroy.html#pygmt.clib.Session.destroy" title="pygmt.clib.Session.destroy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">destroy</span></code></a>(self)</td>
 <td>Destroy the currently open GMT API session.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="pygmt.clib.Session.extract_region.html#pygmt.clib.Session.extract_region" title="pygmt.clib.Session.extract_region"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_region</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="pygmt.clib.Session.extract_region.html#pygmt.clib.Session.extract_region" title="pygmt.clib.Session.extract_region"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_region</span></code></a>(self)</td>
 <td>Extract the WESN bounding box of the currently active figure.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="pygmt.clib.Session.get_default.html#pygmt.clib.Session.get_default" title="pygmt.clib.Session.get_default"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_default</span></code></a>(name)</td>
+<tr class="row-even"><td><a class="reference internal" href="pygmt.clib.Session.get_default.html#pygmt.clib.Session.get_default" title="pygmt.clib.Session.get_default"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_default</span></code></a>(self,&nbsp;name)</td>
 <td>Get the value of a GMT default parameter (library version, paths, etc).</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="pygmt.clib.Session.get_libgmt_func.html#pygmt.clib.Session.get_libgmt_func" title="pygmt.clib.Session.get_libgmt_func"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_libgmt_func</span></code></a>(name[,&nbsp;argtypes,&nbsp;restype])</td>
+<tr class="row-odd"><td><a class="reference internal" href="pygmt.clib.Session.get_libgmt_func.html#pygmt.clib.Session.get_libgmt_func" title="pygmt.clib.Session.get_libgmt_func"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_libgmt_func</span></code></a>(self,&nbsp;name[,&nbsp;argtypes,&nbsp;restype])</td>
 <td>Get a ctypes function from the libgmt shared library.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="pygmt.clib.Session.open_virtual_file.html#pygmt.clib.Session.open_virtual_file" title="pygmt.clib.Session.open_virtual_file"><code class="xref py py-obj docutils literal notranslate"><span class="pre">open_virtual_file</span></code></a>(family,&nbsp;geometry,&nbsp;…)</td>
+<tr class="row-even"><td><a class="reference internal" href="pygmt.clib.Session.open_virtual_file.html#pygmt.clib.Session.open_virtual_file" title="pygmt.clib.Session.open_virtual_file"><code class="xref py py-obj docutils literal notranslate"><span class="pre">open_virtual_file</span></code></a>(self,&nbsp;family,&nbsp;geometry,&nbsp;…)</td>
 <td>Open a GMT Virtual File to pass data to and from a module.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="pygmt.clib.Session.put_matrix.html#pygmt.clib.Session.put_matrix" title="pygmt.clib.Session.put_matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">put_matrix</span></code></a>(dataset,&nbsp;matrix[,&nbsp;pad])</td>
+<tr class="row-odd"><td><a class="reference internal" href="pygmt.clib.Session.put_matrix.html#pygmt.clib.Session.put_matrix" title="pygmt.clib.Session.put_matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">put_matrix</span></code></a>(self,&nbsp;dataset,&nbsp;matrix[,&nbsp;pad])</td>
 <td>Attach a numpy 2D array to a GMT dataset.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="pygmt.clib.Session.put_vector.html#pygmt.clib.Session.put_vector" title="pygmt.clib.Session.put_vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">put_vector</span></code></a>(dataset,&nbsp;column,&nbsp;vector)</td>
+<tr class="row-even"><td><a class="reference internal" href="pygmt.clib.Session.put_vector.html#pygmt.clib.Session.put_vector" title="pygmt.clib.Session.put_vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">put_vector</span></code></a>(self,&nbsp;dataset,&nbsp;column,&nbsp;vector)</td>
 <td>Attach a numpy 1D array as a column on a GMT dataset.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="pygmt.clib.Session.virtualfile_from_grid.html#pygmt.clib.Session.virtualfile_from_grid" title="pygmt.clib.Session.virtualfile_from_grid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">virtualfile_from_grid</span></code></a>(grid)</td>
+<tr class="row-odd"><td><a class="reference internal" href="pygmt.clib.Session.virtualfile_from_grid.html#pygmt.clib.Session.virtualfile_from_grid" title="pygmt.clib.Session.virtualfile_from_grid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">virtualfile_from_grid</span></code></a>(self,&nbsp;grid)</td>
 <td>Store a grid in a virtual file.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="pygmt.clib.Session.virtualfile_from_matrix.html#pygmt.clib.Session.virtualfile_from_matrix" title="pygmt.clib.Session.virtualfile_from_matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">virtualfile_from_matrix</span></code></a>(matrix)</td>
+<tr class="row-even"><td><a class="reference internal" href="pygmt.clib.Session.virtualfile_from_matrix.html#pygmt.clib.Session.virtualfile_from_matrix" title="pygmt.clib.Session.virtualfile_from_matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">virtualfile_from_matrix</span></code></a>(self,&nbsp;matrix)</td>
 <td>Store a 2d array as a table inside a virtual file.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="pygmt.clib.Session.virtualfile_from_vectors.html#pygmt.clib.Session.virtualfile_from_vectors" title="pygmt.clib.Session.virtualfile_from_vectors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">virtualfile_from_vectors</span></code></a>(*vectors)</td>
+<tr class="row-odd"><td><a class="reference internal" href="pygmt.clib.Session.virtualfile_from_vectors.html#pygmt.clib.Session.virtualfile_from_vectors" title="pygmt.clib.Session.virtualfile_from_vectors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">virtualfile_from_vectors</span></code></a>(self,&nbsp;\*vectors)</td>
 <td>Store 1d arrays as columns of a table inside a virtual file.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="pygmt.clib.Session.write_data.html#pygmt.clib.Session.write_data" title="pygmt.clib.Session.write_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_data</span></code></a>(family,&nbsp;geometry,&nbsp;mode,&nbsp;wesn,&nbsp;…)</td>
+<tr class="row-even"><td><a class="reference internal" href="pygmt.clib.Session.write_data.html#pygmt.clib.Session.write_data" title="pygmt.clib.Session.write_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_data</span></code></a>(self,&nbsp;family,&nbsp;geometry,&nbsp;mode,&nbsp;…)</td>
 <td>Write a GMT data container to a file.</td>
 </tr>
 </tbody>
@@ -384,7 +387,7 @@ access the functions).</p>
         <a href="pygmt.clib.Session.call_module.html" class="btn btn-neutral float-right" title="pygmt.clib.Session.call_module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="pygmt.exceptions.GMTCLibNotFoundError.html" class="btn btn-neutral" title="pygmt.exceptions.GMTCLibNotFoundError" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="pygmt.exceptions.GMTCLibNotFoundError.html" class="btn btn-neutral float-left" title="pygmt.exceptions.GMTCLibNotFoundError" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -394,7 +397,9 @@ access the functions).</p>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017-2019, The PyGMT Developers.
-      Last updated on Jan 26, 2019.
+      <span class="lastupdated">
+        Last updated on Aug 31, 2019.
+      </span>
 
     </p>
   </div>
@@ -411,26 +416,16 @@ access the functions).</p>
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-    
-
-  
-
-  <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>
